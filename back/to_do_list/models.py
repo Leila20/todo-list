@@ -37,6 +37,15 @@ class Day(models.Model):
         day_names = dict(DAY_TYPE_CHOICES)
         return day_names[self.type]
 
+    def matches(self, date):
+        if self.type == 'a':
+            return True
+        if self.type == 'm' and date.day == 1:
+            return True
+        if self.type == 'd' and date.isoweekday() == self.day_of_week:
+            return True
+        return False
+
 class TemplateTask(models.Model):
 
     description = models.TextField()
