@@ -45,7 +45,13 @@ INSTALLED_APPS = (
     # Tests
     'factory',
     'django_jenkins',
+
+    'export_app',
 )
+EXPORTER_ADAPTER = 'export_app.adapters.EmberAdapter'
+EXPORTER_FRONT_APPLICATION_NAME = 'to-do-list'
+EXPORTER_FRONT_APPLICATION_PATH = '../front'
+EXPORTER_ROUTER_PATH = 'to_do_list.api_urls.router'
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',

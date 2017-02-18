@@ -1,12 +1,15 @@
 from django.conf.urls import include, url
-from rest_framework import routers
+from drf_auto_endpoint.router import router
+from .endpoints import RoomEndpoint, DayEndpoint, TemplateTaskEndpoint, TaskInstanceEndpoint
 
 from .views import UserViewSet
 
 
-router = routers.DefaultRouter()
-
-router.register(r'userinfos', UserViewSet)
+router.registerViewSet(r'userinfos', UserViewSet)
+router.register(endpoint=RoomEndpoint())
+router.register(endpoint=DayEndpoint())
+router.register(endpoint=TemplateTaskEndpoint())
+router.register(endpoint=TaskInstanceEndpoint())
 
 urlpatterns = [
     url(r'', include(router.urls)),

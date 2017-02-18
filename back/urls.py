@@ -8,6 +8,8 @@ from to_do_list import api_urls
 from to_do_list.views import (EmberView, MeView, LoginView, LogoutView,
                                                 service_worker_view, root_files_view)
 
+from export_app import urls as export_urls, settings as export_settings
+
 urlpatterns = []
 
 if settings.DEBUG:
@@ -29,4 +31,5 @@ urlpatterns += [
     url(r'^api/auth/me/', MeView.as_view()),
 
     url(r'', EmberView.as_view(template_name='index.html'), name='ember'),
+    url(r'^models/', include(export_urls, namespace=export_settings.URL_NAMESPACE)),
 ]
