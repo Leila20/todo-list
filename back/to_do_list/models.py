@@ -61,3 +61,6 @@ class TaskInstance(models.Model):
     task = models.ForeignKey(TemplateTask, related_name='instance')
     done = models.BooleanField()
     date = models.DateField()
+
+    def __str__(self):
+        return self.task.description
