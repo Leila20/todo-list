@@ -19,4 +19,4 @@ class TemplateTaskEndpoint(Endpoint):
 class TaskInstanceEndpoint(Endpoint):
     model = TaskInstance
     read_only = True
-
+    filter_fields = ('task__room', 'date',)
