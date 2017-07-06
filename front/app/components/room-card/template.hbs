@@ -2,7 +2,9 @@
   <h2>{{room.name}}</h2>
   <ul>
     {{#each tasks as |task|}}
-      <li>{{task.__str__}}</li>
+      <li>
+        {{task.__str__}}:<input type="checkbox" checked={{task.done}} onChange={{action 'toggleDone' task}}>
+      </li>
     {{/each}}
   </ul>  
 </div>
