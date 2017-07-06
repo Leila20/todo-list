@@ -1,0 +1,22 @@
+&{
+  a {
+    color: $text-color;
+    display: block;
+    max-width: 100%;
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      float: right;
+      margin-right: $grid-gutter-width /2;
+    }
+  }
+
+  &.done {
+    a {
+      color: $gray;
+      text-decoration: line-through;
+    }
+  }
+}

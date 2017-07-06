@@ -11,10 +11,9 @@ export default Ember.Component.extend({
     return instances;
   }),
 
-  actions: {
-    toggleDone(task) {
-      task.set('done', !task.get('done'));
-      task.save();
-    }
-  }
+  days: Ember.computed(function() {
+    const days = this.get('store').findAll('to-do-list/day');
+    return days;
+  }),
+
 });

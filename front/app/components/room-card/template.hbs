@@ -3,8 +3,24 @@
   <ul>
     {{#each tasks as |task|}}
       <li>
-        {{task.__str__}}:<input type="checkbox" checked={{task.done}} onChange={{action 'toggleDone' task}}>
+        {{todo-item task=task}}
       </li>
     {{/each}}
   </ul>  
+  <form>
+    <div class="form-group">
+      <label>Description</label>
+      <input class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Frequency</label>
+      <select>
+        {{#each days as |day|}}
+          <option value={{day.id}}>{{day.__str__}}</option>
+        {{/each}}  
+      </select>
+    </div>
+    <button class="btn btn-primary">Add</button>
+    <div class="clearfix"></div>
+  </form>
 </div>
