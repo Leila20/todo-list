@@ -16,4 +16,17 @@ export default Ember.Component.extend({
     return days;
   }),
 
+
+  actions: {
+    save(description, frequency) {
+      console.log(description, frequency);
+      const template = this.get('store').createRecord('to-do-list/templatetask', {
+        description: description,
+        room: this.get('room'),
+        day: this.get('store').peekRecord('to-do-list/day', frequency),
+        updatable: false
+      });
+      template.save();
+    }
+  }
 });

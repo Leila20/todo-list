@@ -1,5 +1,7 @@
 import os
 
+from datetime import date
+
 from django.contrib.auth import get_user_model
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -16,6 +18,8 @@ from rest_framework.generics import RetrieveAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import filters
+
+from .models import TaskInstance
 
 from .serializers import UserSerializer, LoginSerializer
 
@@ -57,6 +61,18 @@ class UserViewSet(ModelViewSet):
     queryset = get_user_model().objects.all()
     filter_backends = (filters.DjangoFilterBackend, )
     filter_fields = ('first_name', 'last_name',)
+
+
+class TaskTemplateViewSet(ModelViewSet):
+
+    def perform_create(self, serializer):
+        template = serializer.save()
+        today = date.today()
+
+        if template.day.matches(today):
+            instance = TaskInstance(task=template, done=False, date=today)
+            instance.save()
+
 
 
 class EmberView(TemplateView):

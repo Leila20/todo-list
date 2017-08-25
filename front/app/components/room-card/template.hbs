@@ -8,19 +8,20 @@
     {{/each}}
   </ul>  
   <form>
-    <div class="form-group">
+    <div class="form-group description">
       <label>Description</label>
-      <input class="form-control">
+      {{input value=description class="form-control"}}
     </div>
-    <div class="form-group">
+    <div class="form-group frequency">
       <label>Frequency</label>
-      <select>
+      <select onchange={{action (mut frequency) value="target.value"}}>
+        <option>--</option>
         {{#each days as |day|}}
           <option value={{day.id}}>{{day.__str__}}</option>
         {{/each}}  
       </select>
     </div>
-    <button class="btn btn-primary">Add</button>
+    <button {{action "save" description frequency}} class="btn btn-primary">Add</button>
     <div class="clearfix"></div>
   </form>
 </div>

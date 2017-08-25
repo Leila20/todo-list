@@ -1,5 +1,6 @@
 from drf_auto_endpoint.endpoints import Endpoint
 from .models import Room, Day, TemplateTask, TaskInstance
+from .views import TaskTemplateViewSet
 
 class RoomEndpoint(Endpoint):
 
@@ -14,7 +15,7 @@ class DayEndpoint(Endpoint):
 class TemplateTaskEndpoint(Endpoint):
 
     model = TemplateTask
-    read_only = True
+    base_viewset = TaskTemplateViewSet
 
 class TaskInstanceEndpoint(Endpoint):
     model = TaskInstance
