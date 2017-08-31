@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   
   store: Ember.inject.service(),
 
-  tasks: Ember.computed('room', function() {
+  tasks: Ember.computed('room', 'updated', function() {
     const room = this.get('room');
     const date = new Date().toISOString().split('T')[0];
     const instances = this.get('store').query('to-do-list/taskinstance', {task__room: room.get('id'), date});
@@ -26,7 +26,9 @@ export default Ember.Component.extend({
         day: this.get('store').peekRecord('to-do-list/day', frequency),
         updatable: false
       });
-      template.save();
+      template.save().then(() => {
+        this.set('updated', new Date());
+      });
     }
   }
 });
