@@ -2,8 +2,8 @@
 /*** Typography ***/
 $font-size-base:                     16px;
 /*** Colors ***/
-$body-bg:                            $white;
-$brand-primary:                      #009688;
+$body-bg:                            #32699b;
+$brand-primary:                      #72A1D0;
 $brand-danger:                       #AD1457;
 $brand-warning:                      #FF5722;
 $brand-info:                         #3F51B5;
@@ -33,7 +33,7 @@ $navbar-inverse-color:               $brand-primary;
 $navbar-inverse-link-color:          $navbar-inverse-color;
 $navbar-inverse-link-hover-color:    darken($brand-primary, 15%);
 /*** DropDowns ***/
-$dropdown-bg:                        #00796B;
+$dropdown-bg:                       darken($body-bg, 10%);
 $dropdown-border:                    $dropdown-bg;
 $dropdown-fallback-border:           $dropdown-bg;
 $dropdown-link-color:                $white;

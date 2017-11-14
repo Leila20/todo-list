@@ -2,16 +2,19 @@
   width: 100%;
   
   .card {
-  
+    
+    background-color: $white;
     border: 1px solid $black;
     margin-left: 15px;
     margin-right: 15px; 
     width: 30%;
     min-height: 150px;
     float: left;
+    margin-top: 20px;
 
     h2 {
       text-align: center;
+      color: #A23E4B;
     }
 
     ul{
@@ -21,16 +24,14 @@
       }
     }
 
-    .description {
-      label {
-        width: 30%;
-      }
+    label {
+      width: 30%;
+    }
 
-      input {
-        width: 70%;
-        float: right;
+    input {
+      width: 70%;
+      float: right;
         margin-top: -5px;
-      }
     }
 
     .form-group {
@@ -42,6 +43,11 @@
       float: right;
       margin-top: -15px;
       margin-right: 60px;
+    }
+
+    .addbutton {
+      margin-left: 5px;
+      margin-bottom: 5px;
     }
   }
 }
