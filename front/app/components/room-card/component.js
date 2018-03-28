@@ -19,7 +19,6 @@ export default Ember.Component.extend({
 
   actions: {
     save(description, frequency) {
-      console.log(description, frequency);
       const template = this.get('store').createRecord('to-do-list/templatetask', {
         description: description,
         room: this.get('room'),
@@ -29,6 +28,12 @@ export default Ember.Component.extend({
       template.save().then(() => {
         this.set('updated', new Date());
       });
-    }
+    },
+    delete(room) {
+      return room.destroyRecord().then(() => {
+        this.set('delete', null)
+      });
+      room.save()
+    },
   }
 });

@@ -15,6 +15,6 @@ export default Ember.Component.extend({
     toggleDone() {
       this.set('task.done', !this.get('task.done'));
       this.get('task').save();
-    }
+    },
   }
 });

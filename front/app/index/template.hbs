@@ -1,3 +1,13 @@
 {{#each model as |room|}}
   {{room-card room=room}} 
 {{/each}}
+
+<form class="newroom">
+  <div class="form-group name">
+    <label>Room Name</label>
+    {{input value=name class="form-control"}}
+  </div>
+  <button {{action "save" name}} class="btn btn-primary addroombutton">add room</button>
+</form>
+
+

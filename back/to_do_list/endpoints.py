@@ -5,12 +5,10 @@ from .views import TaskTemplateViewSet
 class RoomEndpoint(Endpoint):
 
     model = Room
-    read_only = True
 
 class DayEndpoint(Endpoint):
 
     model = Day
-    read_only = True
 
 class TemplateTaskEndpoint(Endpoint):
 

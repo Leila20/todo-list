@@ -9,7 +9,7 @@
 
     i {
       float: right;
-      margin-right: $grid-gutter-width /2;
+      margin-right: 30px;
     }
   }
 
@@ -18,5 +18,12 @@
       color: $gray;
       text-decoration: line-through;
     }
+  }
+
+  .trash {
+    float: right;
+    margin-top: -23px;
+    margin-right: 10px;
+    color: $brand-danger; 
   }
 }

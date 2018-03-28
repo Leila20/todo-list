@@ -31,7 +31,7 @@
     input {
       width: 70%;
       float: right;
-        margin-top: -5px;
+      margin-top: -5px;
     }
 
     .form-group {
@@ -45,9 +45,13 @@
       margin-right: 60px;
     }
 
-    .addbutton {
+    .addbutton, .removecard {
       margin-left: 5px;
       margin-bottom: 5px;
+    }
+    
+    .removecard {
+      background-color: #A23E4B;
     }
   }
 }
