@@ -1,0 +1,6 @@
+{{#each model as |list|}}
+  <h2>{{list.__str__}}</h2>
+  {{#each items as |item|}}
+    {{item.description}}
+  {{/each}}
+{{/each}}

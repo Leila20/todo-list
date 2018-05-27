@@ -1,23 +1,24 @@
 *[data-ember-action] {
-  cursor: pointer;
+  cursor:                     pointer;
 }
 
 .newroom {
-  background-color: $white;
-  border: 1px solid $black;
-  float: left;
-  margin-left: 15px;
-  margin-top: 20px;
-  width: 30%;
-  padding: 5px;
+  background-color:           $white;
+  border:                     1px solid $black;
+  float:                      left;
+  margin-bottom:              20px;
+  margin-left:                15px;
+  margin-top:                 20px;
+  width:                      30%;
+  padding:                    5px;
 
   label {
-    width: 40%;
+    width:                    40%;
   }
 
   input {
-    width: 60%;
-    float: right;
+    width:                    60%;
+    float:                    right;
   }
 }
 
@@ -71,6 +72,7 @@ footer > nav.navbar {
   margin-bottom:              0;
   border-top:                 1px solid $navbar-default-bg;
   background-color:           #72A1D0;
+  margin-top:                 20px;
 
   li {
     span.separator {
@@ -121,4 +123,22 @@ footer > nav.navbar {
   width:                      100%;
   text-align:                 center;
   padding-top:                $grid-gutter-width;
+}
+
+.content {
+  width:                      100%;
+  float:                      left;
+
+  h1 {
+    text-align:               center;
+  }
+
+  .left {
+    width:                    50%;
+    float:                    left;
+  }
+  .right {
+    width:                    50%;
+    float:                    right;
+  }
 }

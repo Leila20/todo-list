@@ -31,9 +31,9 @@ export default Ember.Component.extend({
     },
     delete(room) {
       return room.destroyRecord().then(() => {
-        this.set('delete', null)
+        this.set('delete', null);
       });
-      room.save()
+      room.save();
     },
   }
 });

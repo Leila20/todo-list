@@ -27,6 +27,7 @@ except ImportError:
 
 INSTALLED_APPS = (
     'to_do_list',
+    'list',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +39,7 @@ INSTALLED_APPS = (
     # DRF
     'rest_framework',
     'corsheaders',
+    'drf_auto_endpoint',
 
     # Celery
     #'kombu.transport.django.KombuAppConfig',
@@ -86,6 +88,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'to_do_list.wsgi.application'
+
+ALLOWED_HOSTS = ['192.168.2.235', '127.0.0.1', 'localhost']
 
 
 # Password validation

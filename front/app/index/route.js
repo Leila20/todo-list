@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.get('store').findAll('to-do-list/room');
+    return {
+      rooms: this.get('store').findAll('to-do-list/room'),
+      items: this.get('store').findAll('list/list'),
+    };
   },
 
   actions: {
