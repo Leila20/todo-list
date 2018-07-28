@@ -1,0 +1,29 @@
+&{
+  a {
+    color: $text-color;
+    display: block;
+    max-width: 100%;
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      float: right;
+      margin-right: 30px;
+    }
+  }
+
+  &.done {
+    a {
+      color: $gray;
+      text-decoration: line-through;
+    }
+  }
+
+  .trash {
+    float: right;
+    margin-top: -23px;
+    margin-right: 10px;
+    color: $brand-danger; 
+  }
+}

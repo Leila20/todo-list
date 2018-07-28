@@ -1,6 +1,14 @@
 {{#each model as |list|}}
-  <h2>{{list.__str__}}</h2>
-  {{#each items as |item|}}
-    {{item.description}}
-  {{/each}}
-{{/each}}
+  <div class="list-list">
+    <h2 class="title">{{list.__str__}}</h2>
+    <div class="description">
+      {{#each list.items as |item|}}
+        <li>
+          {{list-items item=item}}
+        </li>
+      {{/each}}
+    </div>
+  </div>
+  <button {{action "save" description}} class="btn btn-primary addbutton">Add</button>
+  <button {{action "delete" list}} class="btn btn-danger removecard">Delete ToDo list</button>{{/each}}
+

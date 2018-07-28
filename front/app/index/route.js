@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model() {
     return {
       rooms: this.get('store').findAll('to-do-list/room'),
-      items: this.get('store').findAll('list/list'),
+      lists: this.get('store').findAll('list/list'),
     };
   },
 

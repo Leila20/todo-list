@@ -11,7 +11,7 @@
 import attr from 'ember-data/attr';
 
 
-import { belongsTo } from 'ember-data/relationships';
+import { hasMany } from 'ember-data/relationships';
 
 
 export default Model.extend({
@@ -21,9 +21,9 @@ export default Model.extend({
     __str__: attr('string'),
   
   
-    description: belongsTo('list/listitem', {
+    items: hasMany('list/listitem', {
       async: true,
-      inverse: 'todo',
+      inverse: 'lst',
     }),
   
 });

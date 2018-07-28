@@ -4,7 +4,7 @@ import config from '../config/environment';
 import makeRequest from '../utils/make-request';
 
 export default Base.extend({
-
+  
   init() {
     const globalConfig = config['ember-simple-auth'] || {};
     this.serverAuthEndpoint = globalConfig.serverAuthEndpoint || '/rest-auth';

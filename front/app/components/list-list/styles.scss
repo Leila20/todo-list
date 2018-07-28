@@ -1,0 +1,21 @@
+& {
+  .list-list {
+    border: 1px solid $black;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+
+    .title {
+      text-align: center;
+      color: $title;
+    }
+
+    .description {
+      margin-left: 15px;
+
+      li {
+       list-style-type: none;
+      }
+    }
+  }
+}
