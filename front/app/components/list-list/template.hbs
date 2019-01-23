@@ -1,6 +1,6 @@
 {{#each model as |list|}}
   <div class="list-list">
-    <h2 class="title">{{list.__str__}}</h2>
+    <h2 class="title">{{list.name}}</h2>
     <div class="description">
       {{#each list.items as |item|}}
         <li>
@@ -8,7 +8,14 @@
         </li>
       {{/each}}
     </div>
+    <form>
+      <div class="form-group description">
+        <label>Description</label>
+        {{input value=description class="form-control"}}
+      </div>
+    </form>
+    <button {{action "save" description}} class="btn btn-primary addbutton">Add</button>
+    <button {{action "delete" list}} class="btn btn-danger removecard">Delete ToDo list</button>
   </div>
-  <button {{action "save" description}} class="btn btn-primary addbutton">Add</button>
-  <button {{action "delete" list}} class="btn btn-danger removecard">Delete ToDo list</button>{{/each}}
+{{/each}}
 

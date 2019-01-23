@@ -15,6 +15,13 @@ export default Ember.Route.extend({
       });
       room.save();
     },
+
+    add(todolist) {
+      const list = this.get('store').createRecord('list/list', {
+        name: name,
+      });
+      list.save();
+    }
   }
 });
 

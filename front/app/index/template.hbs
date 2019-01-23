@@ -5,6 +5,13 @@
   </div>
   <button {{action "save" name}} class="btn btn-primary addroombutton">add room</button>
 </form>
+<form class="newroom">
+  <div class="form-group list">
+    <label>ToDo List</label>
+    {{input value=todo class="form-control"}}
+  </div>
+  <button {{action "add" todolist}} class="btn btn-primary addroombutton">add ToDo List</button>
+</form>
 
 <div class="content">
   <div class="left">
