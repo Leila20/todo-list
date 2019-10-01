@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+  <head>
+  <script type='text/javascript'>window.addEventListener('load',function(e){window.applicationCache.addEventListener('updateready',function(e){if (window.applicationCache.status==window.applicationCache.UPDATEREADY){window.applicationCache.swapCache();window.location.reload();}},false);},false);</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To do list</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/" />
+<meta name="to-do-list/config/environment" content="%7B%22modulePrefix%22%3A%22to-do-list%22%2C%22environment%22%3A%22production%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22API_NAMESPACE%22%3A%22api/v1%22%2C%22API_HOST%22%3A%22%22%2C%22name%22%3A%22to-do-list%22%2C%22version%22%3A%220.0.0+3c408860%22%2C%22API_ADD_TRAILING_SLASHES%22%3Atrue%7D%2C%22ember-simple-auth%22%3A%7B%22authorizer%22%3A%22authorizer%3Adjango%22%2C%22authenticationRoute%22%3A%22login%22%2C%22routeAfterAuthentication%22%3A%22profiles%22%2C%22serverAuthEndpoint%22%3A%22/api/auth%22%7D%2C%22serviceWorker%22%3A%7B%22precachedURLs%22%3A%5B%22/api/*%22%5D%2C%22networkFirstURLs%22%3A%5B%22/api/*%22%5D%2C%22fastestURLs%22%3A%5B%22/index.html%22%2C%22/assets/*%22%2C%22%22%2C%22index.html%22%2C%22assets/*%22%5D%7D%2C%22manifest%22%3A%7B%22enabled%22%3Atrue%2C%22appcacheFile%22%3A%22/manifest.appcache%22%2C%22excludePaths%22%3A%5B%22index.html%22%5D%2C%22includePaths%22%3A%5B%22/%22%5D%2C%22network%22%3A%5B%22*%22%5D%2C%22showCreateDate%22%3Atrue%7D%2C%22ember-cli-mirage%22%3A%7B%22usingProxy%22%3Atrue%2C%22useDefaultPassthroughs%22%3Atrue%7D%2C%22contentSecurityPolicy%22%3A%7B%22style-src%22%3A%22%27self%27%20%27unsafe-inline%27%20%27unsave-eval%27%22%7D%2C%22exportApplicationGlobal%22%3Afalse%2C%22ember-load%22%3A%7B%22loadingIndicatorClass%22%3A%22ember-load-indicator%22%7D%2C%22emberOffline%22%3A%7B%22themes%22%3A%7B%22theme%22%3A%22default%22%2C%22indicator%22%3Afalse%2C%22language%22%3A%22english%22%7D%7D%7D" />
+
+    <link rel="stylesheet" href="assets/vendor-3144f72b39c365fc8156b8226019100b.css" integrity="sha256-m9ploG8ZJMXjuLPL5PBpOaJuI/VM61jbMenYL6VG0yg= sha512-n/9MuNMXQ9MdgwLtY8ibz/YiOduQn/YTXFysILfAzRUYmC28Xz4Sc1ssrWKblGy94rW/w7ZyT3M1APRryU/NbQ==" >
+    <link rel="stylesheet" href="assets/to-do-list-77fa081e7b137fbcf29db8512088b1cf.css" integrity="sha256-uVhRxTgTLTKqfCl36cQyNXs0dFqJC+5t/HL6ob7+Yf4= sha512-SGfeDvLiBzJr6O5ltaxeRG2xXZeD7DjKloyd3JSlIn/Ctq5ZyI/1i6VIML9VdLLPJeopRHQEfu/gET92LcBx+A==" >
+
+    <style>
+      /* Spinner CSS from http://tobiasahlin.com/spinkit/ */
+      .spinner {
+        margin: 100px auto 0;
+        width: 70px;
+        text-align: center;
+      }
+  
+      .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+  
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      }
+  
+      .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+  
+      .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+  
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <div class="ember-load-indicator">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    
+
+    <script src="assets/vendor-a4b7144036910e1a801b488ddd1599ef.js" integrity="sha256-dA/8lu+NFf2a+fBnO9E6HFbQfUynBCxyvJUjOmy8w5s= sha512-B0c3qYQuLN2khBka6FCydDYJDjJQVf3YDBCkThoN0SFvMPb2gwWxNjJuTO9Am4ydFkE/qjrQC+lfqFO/QaUZtw==" ></script>
+    <script src="assets/to-do-list-08d3056cd0bf5903f2a391951f8332d2.js" integrity="sha256-6+09k42W5gYL1+ZP+9EO396TVIyPYWwdcJuMyIv73v4= sha512-hu85RdFS4FN15SbQZ7HK6DUCYPJtXcqbxIqLdEzI5L+bYDoBuJrbr2IIjnuan8TDD+meKqOqfIBy7SiBdifuQA==" ></script>
+
+    <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+    .catch(function(error) {
+      console.error('Error registering service worker:'+error);
+    });
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      window.location.reload();
+    });
+} else {
+  console.log('service worker not supported');
+}
+</script>
+  </body>
+</html>
+
+

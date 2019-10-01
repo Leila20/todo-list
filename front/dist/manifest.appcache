@@ -1,0 +1,25 @@
+CACHE MANIFEST
+# created 2019-10-01T10:57:30.488Z
+
+CACHE:
+assets/fonts/bootstrap/glyphicons-halflings-regular.eot
+assets/fonts/bootstrap/glyphicons-halflings-regular.svg
+assets/fonts/bootstrap/glyphicons-halflings-regular.ttf
+assets/fonts/bootstrap/glyphicons-halflings-regular.woff
+assets/fonts/bootstrap/glyphicons-halflings-regular.woff2
+assets/fonts/fontawesome/fontawesome-webfont.eot
+assets/fonts/fontawesome/fontawesome-webfont.svg
+assets/fonts/fontawesome/fontawesome-webfont.ttf
+assets/fonts/fontawesome/fontawesome-webfont.woff
+assets/fonts/fontawesome/fontawesome-webfont.woff2
+assets/fonts/fontawesome/FontAwesome.otf
+assets/to-do-list-08d3056cd0bf5903f2a391951f8332d2.js
+assets/to-do-list-77fa081e7b137fbcf29db8512088b1cf.css
+assets/vendor-3144f72b39c365fc8156b8226019100b.css
+assets/vendor-a4b7144036910e1a801b488ddd1599ef.js
+crossdomain.xml
+robots.txt
+/
+
+NETWORK:
+*
