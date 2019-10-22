@@ -8,7 +8,7 @@ django-debug-panel==0.8.3
 django-debug-toolbar==1.6
 django-filter==1.0.1
 django-jenkins==0.110.0
-djangorestframework==3.5.4
+djangorestframework==3.9.1
 drf-schema-adapter==0.9.51
 factory-boy==2.8.1
 Faker==0.7.7
